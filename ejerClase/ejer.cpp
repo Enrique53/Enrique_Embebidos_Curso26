@@ -8,8 +8,26 @@
 #include <cstdlib>
 
 int suma(int d1, int d2) {
+	std::cout << "suma(int, int): " << d1 << " + " << d2 << std::endl;
     return d1+d2;
 }
+
+
+int suma() {
+	std::cout << "suma(): 1 + 2" << std::endl;
+    return 1+2;
+}
+
+int suma(int a) {
+	std::cout << "suma(int): " << a << " + 2" << std::endl;
+    return a+2;
+}
+
+int suma(float a, float b) {
+	std::cout << "suma(float, float): " << a << " + " << b << std::endl;
+    return a+b;
+}
+
 
 /*
 int main(int narg, char *arg[]) {
