@@ -8,6 +8,14 @@
 #include "Base.h"
 #include <iostream>
 
+int Base::comun=0;
+
+int Base::global(){
+
+	comun++;
+	return comun;
+}
+
 Base::Base() {
 	// TODO Auto-generated constructor stub
 	std::cout << " En constructor Base::Base() " << std::endl;
@@ -36,3 +44,7 @@ void Base::get(int &va, int &vb){
 	vb=b;
 }
 
+int Base::sum(){
+
+	return a+b;
+}

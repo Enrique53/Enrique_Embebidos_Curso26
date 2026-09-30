@@ -23,3 +23,22 @@ TEST(Derivada, constructor) {
 
 }
 
+TEST(Derivada,poli){
+	Base d1(3);
+
+	ASSERT_EQ(d1.sum(),3);
+
+
+	Derivada d2(3,4);
+	ASSERT_EQ(d2.sum(),107);
+
+
+	Base *p;
+	p= &d2; //d2 es clase derivada y estoy llamando a clase base
+	ASSERT_EQ(p->sum(),107); //Como p es puntero de la base usa la suma de la base. Al ponerlo virtual ya va bien
+
+	ASSERT_EQ(p->global(),1);
+	ASSERT_EQ(d1.global(),2);
+	ASSERT_EQ(d2.global(),3);
+
+}
